@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="message-sender-logo.svg" />
+    <link rel="stylesheet" href="common.css">
+    <script>
+      msg = "Message Sender - Whatsapp ";
+      position = 0;
+      function scrolltitle() {
+        document.title =
+          msg.substring(position, msg.length) + msg.substring(0, position);
+        position++;
+        if (position > msg.length) position = 0;
+        window.setTimeout("scrolltitle()", 170);
+      }
+      scrolltitle();
+    </script>
+
+<script src="intlTelInput.min.js"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Hello & Welcome to Whatsapp Sender</h1>
+    <div class="column">
+        <a href="homepage.html"><div class="whatsapp-logo" style="margin-left:auto; margin-right:auto;"></div></a>
+      </div>
+<p class="cnames">
+    <div class="container">
+      <form id="login" onsubmit="process(event)">
+        <p>Please insert the phone number you want to contact right down</p>
+
+        <input id="phone" type="tel" name="phone" />
+
+        <input id="btn-whatsapp" type="submit" class="btn" value= "Verify"/>
+      </form>
+    </div>
+
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "utils.js",
+      });
+    </script>
+</p>
+    </form>
+    <div class="alert alert-info" style="display: none;"></div>
+
+    <script>
+    const info = document.querySelector(".alert-info");
+
+    function process(link) {
+    event.preventDefault();
+
+    const phoneNumber = phoneInput.getNumber();
+
+    info.style.display = "";
+    info.innerHTML = `<br/> <a id="btn-whatsapp" href="http://wa.me/${phoneNumber}">Click Here to Send</a>` ;
+    }
+    </script>
+
+<footer>Message Sender (V1.0) .:Maid By Raad:.</footer>
+  </body>
+</html>

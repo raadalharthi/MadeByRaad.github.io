@@ -1,0 +1,50 @@
+
+
+h1 {
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+p {
+  font-size:40px
+}
+.telegram-logo {
+  background: url("telegram-logo-white.svg") no-repeat;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  border-radius: 60px;
+  border: 5px solid white;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.telegram-logo:hover {
+  background: url("telegram-logo-colored.svg") no-repeat;
+  border: 5px solid #0088cc;
+}
+
+.whatsapp-logo {
+  background: url("whatsapp-logo-white.svg") no-repeat;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  border-radius: 60px;
+  border: 5px solid white;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.whatsapp-logo:hover {
+  background: url("whatsapp-logo-colored.svg") no-repeat;
+  border: 5px solid #53b262
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
